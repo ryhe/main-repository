@@ -31,5 +31,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add .
-          git commit -m "${{ github.event.head_commit.message }} (commit: ${{ github.sha }})" || echo "No changes to commit"
+          git commit -m "${{ github.event.head_commit.message }}\n\n(commit: ${{ github.sha }})" || echo "No changes to commit"
           git push
